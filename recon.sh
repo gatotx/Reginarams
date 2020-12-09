@@ -1,5 +1,2 @@
-echo "* * * * * root /bin/bash /etc/ohpserver/stop 2>/dev/null" > /etc/cron.d/rc
-service cron restart
-echo 'Server-side Auto Recon Complete'
-echo 'Setup Done by Kashi Estudillo'
+fuser -k 110/tcp && systemctl restart openvpn-server@server_tcp
 
